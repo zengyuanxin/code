@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-size: 60px;
+        }
+        .box1{
+            width: 200px;
+            height: 200px;
+            background-color: #bfa;
+        }
+        .box2{
+            width: 200px;
+            height: 200px;
+            background-color: rgb(178, 89, 30);
+           
+            /* 
+                绝对定位-->相对于父元素进行移动
+                    position设置为absolute
+                    特点：
+                        1.开启后如果不设置偏移量元素的位置不会发生任何变化
+                        2.脱离文档流
+                        3.改变元素性质。行内变成块，块被内容撑开
+                        4.提升元素层级
+                        5.相对于其包含块进行定位
+
+                        包含块：
+                            离当前元素最近的祖先“块”元素
+
+                            绝对定位的包含块就是离他最近的开启了定位的祖先元素
+                                如果所有祖先元素都没开，相对于根元素（html）
+
+                            html（根元素，初始包含块）
+            */
+            position:absolute;
+        }
+        .box3{
+            width: 200px;
+            height: 200px;
+            background-color: rgb(82, 214, 49);
+            
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="box1">1</div>
+    <div class="box2">2</div>
+    <div class="box3">3</div>
+</body>
+</html>

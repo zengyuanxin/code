@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+            :link表示没访问过的链接(正常的链接)
+        */
+        a:link{
+            color: red;
+        }
+        /* 
+            :visited表示访问过的链接
+            由于隐私原因，visited这个伪类只能修改链接的颜色
+        */
+        a:visited{
+            font-size: 50px;
+            /* 由于隐私原因，此行代码无效 总不能将访问过的链接搞得很大让全世界都知道你在看h网 */
+            color: orange;
+        }
+         /* 上面两个伪类只适用于a元素 */
+        /* 
+            :hover 表示鼠标移入的状态
+        */
+        a:hover{
+            color: rgb(1, 255, 115);
+        }
+        /* 
+            :active 表示鼠标点击状态
+        */
+        a:active{
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        1.访问过的连接
+        2.没访问过的连接
+     -->
+    <a href="https://www.baidu.com">访问过的连接</a>
+    <br>
+    <a href="https://www.baidu123.com">没访问过的连接</a>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1{
+            width: 200px;
+            height: 200px;
+            background-color: #bfa;
+            /* 用来设置元素的阴影效果，不会影响到页面布局 */
+            box-shadow:10px 10px 20px rgba(170, 161, 161,.7);
+            /* 阴影偏移量 
+                水平偏移量 ：正值右移 负值左移
+                垂直偏移量 ：正值下移 负值上移
+                阴影模糊半径
+                阴影颜色 一般用rgba 带点透明效果
+            */
+        }
+        .box1:hover{
+    /* 轮廓线 用法和border一样 区别在于轮廓不会影响到可见框的大小 */
+            outline: 10px red solid;
+            /* border: 10px red solid; */
+        }
+        .box2{
+            width: 200px;
+            height: 200px;
+            background-color: orange;
+            /* border-radius:用来设置圆角 圆的半径大小
+                border-top-left-radius: ;
+                border-top-right-radius: ;
+                border-bottom-left-radius: ;
+                border-bottom-right-radius: ; 
+            */
+            border-top-left-radius: 50px;
+            /* border-top-left-radius: 50px 100px; 
+                            椭圆 x轴 y轴 
+            */
+            /* 
+                border-radius 从左上开始 顺时针
+            */
+            border-radius: 50px / 100px;
+                        /* 横向 / 纵向 */
+            border-radius: 50%;
+            /* 变成圆形 */
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <span></span>
+    <div class="box2"></div>
+</body>
+</html>

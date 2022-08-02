@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1{
+            border: 10px red solid;
+            /* overflow: hidden; */
+        }
+        .box2{
+            width: 100px;
+            height: 100px;
+            background-color: #bfa;
+            float: left;
+        }
+        .box3{
+            clear: both;
+        }
+        .box1::after{
+            /* 
+                ::after行内元素，clear：both起不到作用，上外边距改变无效（行内元素特点）
+                将行内元素转变为块元素
+            */
+            content: '';
+            /* content一定要写 */
+            display: block;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <div class="box2"></div>
+        
+        </div>
+    </div>
+</body>
+</html>

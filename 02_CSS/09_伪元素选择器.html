@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            font-size: 20px;
+        }
+        /* 
+            伪元素，表示页面中一些特殊的并不真实存在的元素（特殊的位置）
+                伪元素使用 :: 开头
+
+                ::first-letter 表示第一个字母
+                ::first-line 表示第一行
+                ::selection 表示选中内容
+                ::before 元素的开始位置
+                ::after 元素的结束位置
+                    before和after 必须结合content属性来使用,且内容无法选中
+        */
+        p::first-letter{
+            font-size: 50px;
+        }
+        p::first-line{
+            background-color:yellow;
+        }
+        p::selection{
+            background-color: green;
+        }
+        div::before{
+            content: '『';
+            color: red;
+        }
+        div::after{
+            content: '』';
+            color: red;
+        }
+
+    </style>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non necessitatibus libero suscipit laudantium voluptates culpa, fuga temporibus fugiat, cumque iusto enim at placeat est porro animi reiciendis, quo et earum.</p>
+    <q>hello</q>
+    <!-- 这里的双引号也不能选中，说明是通过css加上去的 -->
+    <div>hello how are you</div>
+</body>
+</html>

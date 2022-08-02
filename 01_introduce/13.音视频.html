@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        audio 标签用来向页面中引入一个外部的音频文件
+            音视频文件引入时，默认情况下不允许用户自己控制停止播放
+            属性：
+                controls 是否允许用户控制播放
+                autoplay 音频文件是否自动播放
+                    但大部分浏览器不会自动对音乐进行播放
+                    controls autoplay loop
+                loop循环播放
+     -->
+    方式一：<br>
+     <audio src="./source/audio.mp3" controls autoplay ></audio>  
+    <!-- 除了通过src指定文件路径外，还可以通过source 指定文件路径 -->
+    <br> 方式二：<br>
+    <audio controls>
+        <!-- 您的浏览器不支持播放音频，请升级浏览器 -->
+        <source src = "./source/audio.mp3">
+        <!-- 两个文件不会同时使用，优先使用第一个，第一个不能用就用第二个，都不能用就出现提示 -->
+        <source src="./source/audio.ogg">
+
+        <!--  -->
+        <embed src="./source/audio.mp3" type="audio/mp3" width="400" height="300">
+    </audio>
+
+    <!-- 
+        使用video标签向网页中引入视频
+        使用方式和audio基本一样
+     -->
+    <video controls>
+        <source src="./source/flower.webm">
+        <source src="./source/flower.mp4">
+        <embed src="./source/flower.mp4" type="video/mp4">
+    </video>
+    </video>
+</body>
+</html>

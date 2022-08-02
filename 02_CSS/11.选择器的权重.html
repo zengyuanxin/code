@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            background-color: yellow;
+        }
+        .red{
+            background-color: red;
+        }
+        #box1{
+            background-color: blue;
+        }
+        div#box1{/*并集，优先级相加*/
+            background-color: blueviolet;
+        }
+        div,p,span{/*并集，单独计算*/
+            background-color: aqua;
+        }
+        *{
+            font-size: 30px;
+        }
+        div{
+            font-size: 20px;
+        }
+        /* 
+            样式的冲突
+                当我们通过不同的选择器选中相同的元素，并为相同的样式设置不同的值时，就发生了冲突
+            选择器权重
+                内联样式            1,0,0,0    (内联样式：直接写一个style属性在标签内)
+                id选择器            0,1,0,0
+                类和伪类选择器       0,0,1,0
+                元素选择器           0,0,0,1
+                通配选择器           0,0,0,0
+                继承的样式              没有优先级
+            比较优先级时，需要将所有选择器优先级进行相加再比较（分组选择器单独计算）
+            选择器的累加不会超过其最大数量级
+            eg：类选择器再多再搞不会超过id选择器
+            不能跨数量级
+            如果优先级相同，优先使用靠下的样式
+            
+            ****
+            可以在某个样式后面加！important，此时该样式会获取到最高优先级，甚至超越内联样式
+            但是在开发中慎用
+            
+        */
+    </style>
+</head>
+<body>
+    <div id = "box1" class="red">我是div 
+        <span>我是div中span</span>
+    </div>
+</body>
+</html>

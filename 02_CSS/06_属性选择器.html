@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            color: orange;
+        }
+        /* 元素选择+属性选择 */
+        /* 
+        [属性名] 选择含有指定属性的元素
+        [属性名 = 属性值] 选择含有指定属性和属性值的元素
+        [属性名^= 属性值] 选择属性值以指定值开头的元素  -->找头
+        [属性名$= 属性值] 选择属性值以指定值结尾的元素  -->找尾
+        [属性名*= 属性值] 属性值中含有某值的元素        -->找任意
+        */
+        p[title]{
+            font-size: 30px;
+        }
+        p[title = ABC]{
+            color: blue;
+        }
+        P[title^=DEF]{
+            font-size: 40px;
+        }
+        P[title$=ABC]{
+            color: pink;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>标题</h1>
+    <!-- title：提示文字 -->
+    <p title="ABC">少小离家老大回</p>
+    <p title="DEF">乡音无改鬓毛衰</p>
+    <p title="DEFGHI">儿童相见不相识</p>
+    <p title="hhABC">笑问客从何处来</p>
+</body>
+</html>

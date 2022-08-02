@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1{
+            width: 500px;
+            height: 500px;
+            background-color: #bfa;
+            position: relative;
+        }
+        .box2{
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+            position: absolute;
+            margin-left: auto;
+            margin-right: auto;
+            /* 
+            水平布局宽度加起来要等于包含块的宽度
+            margin-left+border-left+padding-left+width+padding-right+border-right+margin-right = 包含块宽度
+            开启绝对定位后，
+            left + margin-left + border-left + padding-left + width + padding-right + border-right + margin-right + right = 包含块内容区宽度
+            left和right默认值是auto
+            要水平居中lr都要设为0，mlr设为auto
+            垂直方向布局也要满足
+            */
+            margin-top: auto;
+            margin-bottom: auto;
+            right: 0;
+            left: 0;
+            top: 0;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <div class="box2"></div>
+    </div>
+</body>
+</html>

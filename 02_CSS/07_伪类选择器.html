@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 伪类 ：不存在的类、特殊的类 */
+        /* 
+            伪类用来描述一个元素的特殊状态
+                比如：第一个子元素、被点击的元素、鼠标移入的元素
+            伪类一般情况下用“ ：”开头
+            :first-child 第一个子元素
+            :last-child 最后一个子元素
+            :nth-child() 选中第n个子元素
+            :only-child选择器匹配属于父级中唯一子元素的元素
+
+                特殊值：
+                 n 第n个 n的范围 ：0-无穷 选中全部
+                 2n / even 选中偶数位
+                 2n+1 / odd 奇数
+
+                 以上伪类都是根据所有子元素进行排序
+
+                 :first-of-type
+                 :last-of-type
+                 :nth-of-type()
+                 以上伪类的功能和上述类似，不同点是他们在同类元素中进行排序
+
+                 :not(),否定伪类
+                    将符合条件的元素从选择器中去除
+
+        */
+        /* 无效是因为在所有类型中排序中first-child是span
+            但是这里要选择的是ul里的li，所以交集为空找不到
+        */
+        /* ul>li:first-child{
+            font-size: 30px;
+        }
+        ul>li:first-of-type{
+            color: red;
+        }
+        ul>:not(:nth-child(3)){
+            color: blue;
+        } */
+
+        ul>li:nth-child(n){
+            color: blue;
+        }
+        
+    </style>
+</head>
+<body>
+    <ul>
+        <span>span</span>
+        <li>一</li>
+        <li>二</li>
+        <li>三</li>
+        <li>四</li>
+        <li>五</li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../02_CSS/css/reset.css">
+
+    <style>
+        div.outer{
+            width:auto;
+            height: 30px;
+            background-color: #E3E4E5;
+        }
+        div.inner{
+            width: 1190px;
+            height: 30px;
+            margin: 0 auto;
+            background-color: #bfa;
+        }
+        
+        ul li{
+           float: left; 
+        }
+        ul.left{
+            height: 30px;
+            width: 30px;
+            border: 1px red solid;
+        }
+        ul{
+            
+        }
+        ul.left li{
+            text-align: left;
+        }
+        ul.right li {
+            text-align: right;
+        }
+        li a,
+        li span{
+            text-decoration: none;
+            font-size: 12px;
+            color: #999999;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner">
+            <ul class="left">  
+                <li>
+                    <i></i>
+                    <a href="javascript:;">北京</a>
+                </li>
+            </ul>
+            <ul class="right">
+                <li><a href="javascript:;">你好，请登录</a></li>
+                <li><a href="javascript:;">免费注册</a></li>
+                <li><a href="javascript:;">我的订单</a></li>
+                <li>
+                    <div>
+                        <a href="javascript:;">我的京东</a>
+                        <i></i>
+                    </div>
+                </li>
+                <li><a href="javascript:;">京东会员</a></li>
+                <li>
+                    <div>
+                        <a href="javascript:;">企业采购</a>
+                        <i></i>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <span>客户服务</span>
+                        <i></i>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <span>网站导航</span>
+                        <i></i>
+                    </div>
+                </li>
+                <li><span>手机京东</span></li>
+                <li><a href="javascript:;">网站无障碍</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

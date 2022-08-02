@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-size: 60px;
+        }
+        .box1{
+            width: 200px;
+            height: 200px;
+            background-color: #bfa;
+            /* 
+                元素开启定位后可以通过z-index提高层级，数值越大层级越高，整数
+                层级一样优先显示body中靠下编写的元素
+                祖先元素层级再高也不会该住后代元素，水涨船高
+            */
+        }
+        .box2{
+            width: 200px;
+            height: 200px;
+            background-color: rgba(255 , 0, 0,.3);
+            position: absolute;
+            top: 50px;
+            left: 50px;
+        }
+        .box3{
+            width: 200px;
+            height: 200px;
+            background-color: rgb(82, 214, 49);
+            position: absolute;
+            top: 100px;
+            left: 100px;
+        }
+        .box4{
+            width: 100px;
+            height: 100px;
+            background-color: rgb(220, 220, 56);
+           
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">1</div>
+    <div class="box2">2</div>
+    <div class="box3">3
+        <div class="box4">4</div>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* 方式一，元素选择器 */
+         p{
+            color: red;
+         }
+         h1{
+            color: green;
+         }
+         /* 方式二 : id选择器 #id*/
+         #red{
+            color: black;
+         }
+         /* 方式三 : 类选择器 .class*/
+         .blue{
+            color: blue;
+         }
+         .abc{
+            font-size: 30px;
+         }
+         /* 方式四 ： 通配选择器 * */
+         *{
+            color: red;
+         }
+         /* 优先级：id -> class -> 元素选择器 -> 通配选择器 */
+    </style>
+</head>
+<body>
+    <h1>标题</h1>
+    <p id="red">少小离家老大回</p>
+    <p>乡音无改鬓毛衰</p>
+    <!-- 
+        class是一个标签的属性，和id类似，不同的是class可以重复使用
+            可以通过class属性来分组
+     -->
+    <p class="blue abc">儿童相见不相识</p>
+    <p class="blue">笑问客从何处来</p>
+</body>
+</html>

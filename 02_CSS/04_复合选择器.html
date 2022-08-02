@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 将class为red的元素设置为红色 */
+        .red{
+            color: red;
+        }
+        /* 将class为red的div字体大小设置成30px */
+        /*
+            交集选择器
+            注意点：
+                交集选择器中如果有元素选择器，则必须使用元素选择器开头
+                选择器1.选择器2.选择器3{}
+
+
+         */
+        div.red{
+            font-size: 30px;
+        }
+        .a.b.c{
+            color: green;
+        }
+        /* 
+            并集选择器
+            选择器1,选择器2,选择器3{}
+        */
+        h1,span{
+            color: aqua;
+        }
+        div.a>p{
+            font-size: 80px;
+        }
+        div#ok>p:first-child,span{
+            color:purple;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="red">我是div</div>
+    <div class="red a b c">
+        我是div2
+        <p id="1">我是p1元素</p>
+    </div>
+    <div id="ok">
+        我是div3
+        <p class="2">我是p2元素</p>
+        <p class="3">我是p3元素</p>
+    </div>
+    <p class="red">我是p元素</p>
+    
+    <h1>标题</h1>
+    <span>哈哈</span>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .s1{
+            background-color: yellow;
+            /* 
+                行内元素的盒模型
+                    不支持设置宽度和高度
+                    行内元素可以设置padding，但垂直方向padding不会影响布局
+                    行内元素可以设置border，但垂直方向border不会影响布局
+                    行内元素可以设置margin，但垂直方向margin不会影响布局
+            */
+            /* padding: 100px; */
+            /* border: red 100px solid; */
+        }
+        .box1{
+            width: 200px;
+            height: 200px;
+            background-color: #bfa;
+        }
+        a{
+            /* 
+                display 用来设置元素显示的类型
+                    可选值：
+                        inline 将元素设置为行内元素
+                        block 将元素变为块元素
+                        inline-block 将元素设置为行内块元素
+                            行内块，既可以设置宽度和高度又不会独占一行
+                        table 将元素设置成表格
+                        none 元素不在页面中显示----人间蒸发，不占据位置
+
+                visibility 用来显示元素的显示状态
+                    可选值：
+                        visible 默认值，元素在页面中显示
+                        hidden 元素在页面中隐藏,但依然占页面的位置---隐形斗篷，占据位置
+            */
+            display: inline-block;
+            visibility: none;
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+    <span class="s1">我是span</span>
+    <div class="box1"></div>
+    <a href="javascript:;">超链接</a>
+</body>
+</html>
