@@ -123,6 +123,40 @@
             padding-bottom: 1px;
         }
 
+        /* 设置网站导航 */
+        .web-nav-block .web-nav{
+            border: 1px solid transparent;
+            padding: 0 8px;
+            margin: 0 -8px;
+            position: relative;
+            z-index: 9999;
+        }
+        /* 设置网站导航下拉列表web-nav-list */
+        .web-nav-block .web-nav-list{
+            width: 1188px;
+            height: 170px;
+            right: 100px;
+            background-color: white;
+            display: none;
+            position: absolute;
+            top: 31px;
+            border: 1px solid rgb(204, 204, 204);
+            box-shadow: 0 2px 2px rgba(0, 0, 0, .2);
+            z-index: 999;
+        }
+        /* 设置鼠标移入web-nav-block 让web-nav-list显示 */
+        .web-nav-block:hover .web-nav-list{
+            display: block;
+        }
+        /* 当鼠标移入web-nav-block板块时，web-nav效果变化 */
+        .web-nav-block:hover .web-nav{
+            position: relative;
+            border: 1px solid rgb(204, 204, 204);
+            background-color: white;
+            border-bottom: none;
+            padding-bottom: 1px;
+        }
+
         
         /* 设置shortcut */
         .shortcut{
