@@ -30,7 +30,8 @@
         /* 
             如果表格中没有使用tbody而是直接使用tr，
                 那么浏览器会自动创建一个tbody，并且将tr全都放到tbody中
-                tr不是table的子元素
+                tr不是table的子元素 
+                table是tr的祖先，table的子元素是thead，tbody，tfoot
          */
         tbody > tr:nth-child(odd){
             background-color: #bfa;
